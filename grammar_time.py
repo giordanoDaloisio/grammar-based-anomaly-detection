@@ -1,5 +1,5 @@
 import pandas as pd
-from utils import build_grammar_from_df, build_frequent_set
+from rq1.utils import build_grammar_from_df, build_frequent_set
 import time
 import os
 from pyts.approximation import SymbolicAggregateApproximation

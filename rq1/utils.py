@@ -65,9 +65,3 @@ def check_sentence(sentence, parser1, parser2):
             return 0
     except ValueError:
         return 0
-
-
-def build_frequent_set(data):
-    joined = np.apply_along_axis(lambda x: "".join(x), 1, data)
-    string, count = np.unique(joined, return_counts=True)
-    return pd.DataFrame({"string": string, "count": count})
