@@ -3,12 +3,7 @@ import numpy as np
 import os
 from pyts.approximation import SymbolicAggregateApproximation
 from sklearn.model_selection import train_test_split
-
-
-def build_frequent_set(data):
-    joined = np.apply_along_axis(lambda x: "".join(x), 1, data)
-    string, count = np.unique(joined, return_counts=True)
-    return pd.DataFrame({"string": string, "count": count})
+from utils import build_frequent_set
 
 
 def generate_data(path, store_path):
@@ -42,7 +37,7 @@ def generate_data(path, store_path):
 if __name__ == "__main__":
 
     # E-Shopper
-    generate_data(os.path.join("data", "eshopper"), "eshopper")
+    generate_data(os.path.join("..", "data", "eshopper"), "eshopper")
 
     # Train Ticket
-    generate_data(os.path.join("data", "trainticket"), "trainticket")
+    generate_data(os.path.join("..", "data", "trainticket"), "trainticket")

@@ -5,6 +5,12 @@ from nltk import CFG, ChartParser
 import numpy as np
 
 
+def build_frequent_set(data):
+    joined = np.apply_along_axis(lambda x: "".join(x), 1, data)
+    string, count = np.unique(joined, return_counts=True)
+    return pd.DataFrame({"string": string, "count": count})
+
+
 def truncate_after_three_consecutive_spaces(input_file, output_file):
     with open(input_file, "r") as infile, open(output_file, "w") as outfile:
         for line in infile:
