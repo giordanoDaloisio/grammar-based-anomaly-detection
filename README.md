@@ -1,5 +1,8 @@
 # ICPE 2024 Data Challenge Replication Package
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10806012.svg)](https://doi.org/10.5281/zenodo.10806012)
+
+
 This repository contains the replication package for the ICPE 2024 Data Challenge paper titled _Grammar-Based Anomaly Detection of Microservice Systems Execution Traces_
 
 ## Structure
